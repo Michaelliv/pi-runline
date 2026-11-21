@@ -1,6 +1,6 @@
 # pi-runline
 
-`pi-runline` is a [Pi](https://pi.dev) extension that adds [runline](https://github.com/Michaelliv/runline#readme) to an agent as one tool. The agent writes JavaScript that calls runline actions, and discovers those actions from inside the code it runs.
+`pi-runline` is a [Pi](https://pi.dev) extension that adds [runline](https://github.com/shift-labs-ai/codemode/tree/v0.45.0#readme) to an agent as one tool. The agent writes JavaScript that calls runline actions, and discovers those actions from inside the code it runs.
 
 Use it when a Pi agent should work with services such as GitHub, Slack, or Linear without a separate tool for each endpoint.
 
@@ -46,7 +46,7 @@ Runline loads a bundled plugin only when the project has a connection for it. Fo
 runline connection add node --plugin node
 ```
 
-Plugins that use OAuth are connected with `runline auth <plugin>`. See [Connections](https://github.com/Michaelliv/runline/blob/main/docs/connections.md).
+Plugins that use OAuth are connected with `runline auth <plugin>`. See [Connections](https://github.com/shift-labs-ai/codemode/blob/v0.45.0/docs/connections.md).
 
 ## Understand what the agent receives
 
@@ -67,7 +67,7 @@ actions.check("github.issue.create", { owner: "acme" });
 return await github.issue.create({ owner: "acme", repo: "api", title: "Bug" });
 ```
 
-See [Run Code](https://github.com/Michaelliv/runline/blob/main/docs/usage.md) for the calling conventions and the runtime.
+See [Run Code](https://github.com/shift-labs-ai/codemode/blob/v0.45.0/docs/usage.md) for the calling conventions and the runtime.
 
 ## Configure the extension
 
@@ -101,7 +101,7 @@ The extension uses this project when the working folder has no `.runline` folder
 
 Runline loads the project's own plugin files and packages only after the project is trusted. Run `runline trust` in a project that `runline init` did not create.
 
-Actions run with the permissions of the Pi process, and actions that write run without asking. See [Security](https://github.com/Michaelliv/runline/blob/main/docs/security.md).
+Actions run with the permissions of the Pi process, and actions that write run without asking. See [Security](https://github.com/shift-labs-ai/codemode/blob/v0.45.0/docs/security.md).
 
 ## Development
 
