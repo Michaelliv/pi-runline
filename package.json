@@ -16,11 +16,9 @@
     ]
   },
   "scripts": {
-    "build": "echo 'no build'",
-    "test": "echo 'no tests'",
     "typecheck": "tsc",
-    "lint": "biome check extensions/",
-    "lint:fix": "biome check --write extensions/"
+    "check": "biome check .",
+    "format": "biome check --write ."
   },
   "dependencies": {
     "runline": "0.45.0"
@@ -33,7 +31,16 @@
   "author": "michaelliv",
   "license": "MIT",
   "devDependencies": {
+    "@biomejs/biome": "^2.4.12",
     "@types/node": "^25.5.0",
     "typescript": "^5.8.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Michaelliv/pi-runline.git"
+  },
+  "homepage": "https://github.com/Michaelliv/pi-runline#readme",
+  "bugs": {
+    "url": "https://github.com/Michaelliv/pi-runline/issues"
   }
 }
